@@ -39,7 +39,7 @@ public class Application04 {
         int num = 190;
 
         /* 아래의 연산의 차이를 옆사람에게 설명해주세요. */
-        int sum = (int)num + num; // 계산 시점에서 int 자료형으로 값을 대입해 계산을 진행한다.
+        int sum = (int)lnum + num; // 계산 시점에서 int 자료형으로 값을 대입해 계산을 진행한다.
         int sum2 = (int)(num + lnum); // 계산 시점에서는 int 자료형으로 제시된 num 값을 long 자료형으로 형변환해 그 값을 lnum와 더한 후 int 자료형으로 다시 형변환한다.
 
         /* 사업을 시작한 홍길동은 10월 18일 매출에서 부가세(10%)를 제외한 소득을 알고 싶다.
