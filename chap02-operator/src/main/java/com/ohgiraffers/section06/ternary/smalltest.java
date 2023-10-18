@@ -37,7 +37,12 @@ public class smalltest {
             };
         };
 
-        System.out.println("길동이의 연봉은 " + /* total */  "만원입니다.");
+        int oddSalary = 6 * (gildong + (int)(gildong * odd));
+        int evenSalary = 6 * (gildong + (int)(gildong * even));
+
+        int totalSalary = oddSalary + evenSalary;
+
+        System.out.println("길동이의 연봉은 " +  totalSalary + "만원입니다.");
 
         System.out.println("========예시 문제=========");
 
@@ -120,18 +125,34 @@ public class smalltest {
 
         System.out.println("========예시 문제=========");
 //        영어시험을 본 결과 1번 학생은 90점 2번 학생은 95점 3번 학생은 81점을 맞았다 평균을 구한 후 논리 연산자를 이용해 90점 이상~100점 이하라면 true를 출력, 아니라면 false를 출력하라.
+        int student1 = 90;
+        int student2 = 95;
+        int student3 = 81;
+        int aver = (student1 + student2 + student3) / 3;
+
+        System.out.println(aver >= 90 && aver <= 100);
+
+
 
         System.out.println("========예시 문제=========");
         /* 300만원을 갖고 있는 김과장이 62만원인 지갑을 구매하려 한다. 실행되지 않는 코드의 오류를 수정해라. */
 
-        String name = '김과장'
-        balance = 3000000
-        walletPrice = 620000
+        String name = "김과장";
+        int balance = 3000000;
+        int walletPrice = 620000;
 
-        int result = (balance >= walletPrice) ? (name + " 님의 결제가 진행되었습니다. " + name + " 님의 남은 잔고 : " + (balance - walletPrice)) : "잔액 부족으로 결제가 진행되지 않았습니다.";
+        String result0 = (balance >= walletPrice) ? name + " 님의 결제가 진행되었습니다. " :
+                name + " 님의 남은 잔고" + (long) (balance - walletPrice) + "잔액 부족으로 결제가 진행되지 않았습니다.";
 
-        System.out.println(result);
+        System.out.println(result0);
+
         System.out.println("========예시 문제=========");
 //        시험과목 3개의 점수가 50,40,60이다 평균 40을 넘기면 합격 못넘기면 불합격 출력
+        int score1 = 50;
+        int score2 = 40;
+        int score3 = 60;
+        int average = (score1 + score2 + score3) / 3;
+        String excellent = (average >= 40)? "합격" : "불합격";
+        System.out.println(excellent);
     }
 }
