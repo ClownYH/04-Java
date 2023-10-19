@@ -31,6 +31,12 @@ public class Application7 {
 
         System.out.println(sum);
     }
+
+/*     public int summary(int alpha, int beta){
+    *
+    *   return alpha + beta;
+    * } // 값을 반환하려면 return을 써서 만드는 것이 옳다.*/
+
     public void subtract(int alpha, int beta) {
 
         int sub = alpha - beta;
