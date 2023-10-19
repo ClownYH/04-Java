@@ -24,6 +24,7 @@ public class Application {
         int num2 = 7;
 
         System.out.println("num1 + num2 = " + (num1 + num2)); // 연산식에 괄호가 없다면 문자열로 받아들인다.
+//        System.out.println("num1 - num2 = " + num1 - num2); // 문자열은 더하기만 가능하다.
         System.out.println("num1 - num2 = " + (num1 - num2));
         System.out.println("num1 * num2 = " + (num1 * num2));
         System.out.println("num1 / num2 = " + (num1 / num2));

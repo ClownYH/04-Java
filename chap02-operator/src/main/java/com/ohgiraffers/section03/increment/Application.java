@@ -18,7 +18,7 @@ public class Application {
         System.out.println(num); // 증감연산자는 피연산자의 값 자체를 바꿔버린다.
 
         result = 1;
-        result = result * num++; // (num = 11) ++가 앞이냐 뒤냐에 따라 계산이 바뀐다. 곱셈을 진행한 후 증감을 시행(++이 뒤)
+        result = result * num++; // (num = 11, 앞에서 증가를 한 번 겪음) ++가 앞이냐 뒤냐에 따라 계산이 바뀐다. 곱셈을 진행한 후 증감을 시행(++이 뒤)
         System.out.println(result);
         System.out.println(num);
 
