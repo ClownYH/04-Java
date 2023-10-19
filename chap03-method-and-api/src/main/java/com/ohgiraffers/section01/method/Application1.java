@@ -1,6 +1,7 @@
 package main.java.com.ohgiraffers.section01.method;
 
-public class Application1 { //이게 클래스
+public class Application1 { //
+    // 이게 클래스
     public static void main(String[] args) { //이게 메소드, static : 프로그램을 실행할 때 미리 메모리에 적재하는 것
 
         /*
