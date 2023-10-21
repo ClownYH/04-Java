@@ -66,7 +66,7 @@ public class B_while {
             for(int i = 1; i <= num ; i++){
                 for(int o = 1; o < 10; o++){
 //                    if(i % 2 == 0){
-//                        continue; // continue는 건너뛰는 것을 의미
+//                        continue; // continue는 건너뛰는 것을 의미, 이렇게 하면 짝수값은 건너뛰기 때문에 홀수만 출력하게 됨
 //                    }
                     if(num < 10){
                         System.out.println(i + " * " + o + " = " + (i * o));
