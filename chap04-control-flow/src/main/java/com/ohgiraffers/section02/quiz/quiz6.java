@@ -39,13 +39,13 @@ public class quiz6 {
 
 
                     if (ans.equals("y")){
-                        out = true;
                         System.out.println("다시 시작합니다.");
                     }else if(ans.equals("n")){
                         System.out.println("종료합니다.");
                         return;
                     }else{
-                        System.out.println("다시 선택해주세요.(y/n)");
+                        System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
+                        return;
                     }
 
 
