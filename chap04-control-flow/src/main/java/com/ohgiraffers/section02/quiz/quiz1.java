@@ -13,7 +13,7 @@ public class quiz1 {
 
 
         // 음료 선택시 가격을 제시
-        System.out.print("음료를 선택해주세요 : ");
+
 
 
 
@@ -22,6 +22,7 @@ public class quiz1 {
         int price = 0;
 
         while(true){
+            System.out.print("음료를 선택해주세요 : ");
             String drink = scanner.next();
 
             switch (drink){
@@ -31,7 +32,7 @@ public class quiz1 {
                 case "바카스" : price += 1000; break;
                 case "핫식스" : price += 1500; break;
                 default :
-                    System.out.println("처음부터 다시 해주세요."); return;
+                    System.out.println("음료를 다시 선택해주세요."); continue;
             };
             System.out.println(drink + "를 선택하셨습니다.");
 
