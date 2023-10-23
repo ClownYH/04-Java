@@ -38,6 +38,7 @@ public class Application03 {
         // System의 arrayCopy를 이용한 복사
         int[] copyArr3 = new int[10];
         System.arraycopy(originArr, 0, copyArr3, 3, originArr.length);
+        // 원본, 몇 번째 배열부터 복사할지(0번부터), 복사물, 몇 번째 배열부터 쓸지(0번부터), 원본에서 얼마만큼 가져올지의 길이
         print(copyArr3);
 
         // Array의 copyOf를 이용한 복사
@@ -50,7 +51,7 @@ public class Application03 {
         System.out.println("iarr의 hashCode : " + iarr.hashCode());
 
         for (int i = 0; i < iarr.length; i++) {
-            System.out.println(iarr[i] + " ");
+            System.out.print(iarr[i] + " ");
         }
         System.out.println();
     }

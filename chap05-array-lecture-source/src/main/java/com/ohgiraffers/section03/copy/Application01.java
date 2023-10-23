@@ -26,7 +26,7 @@ public class Application01 {
         System.out.println(copyArr.hashCode());
 
 
-        for (int x : originArr) {
+        for (int x : originArr) { // for문에서 조건문의 :은 A:B A에 B의 값을 하나씩 전부 넣어보겠다.
             System.out.println(x);
         }
 
