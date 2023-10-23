@@ -6,8 +6,8 @@ public class Application02 {
     public static void main(String[] args){
         /* 배열의 사용 방법
         * 1. 배열의 선언
-        * 2.
-        * 3.
+        * 2. 배열의 할당
+        * 3. 배열의 인덱스 공간에 값 대입
         * */
 
         /* 자료형[] 변수명;
