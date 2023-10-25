@@ -1,4 +1,4 @@
-package com.ohgiraffers.section04.comparision;
+package com.ohgiraffers.section04.comparison;
 
 public class Application {
     public static void main(String[] args){
