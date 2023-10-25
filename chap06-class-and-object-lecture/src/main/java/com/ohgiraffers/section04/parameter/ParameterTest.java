@@ -42,7 +42,7 @@ public class ParameterTest {
         System.out.println(hobby.hashCode());
         System.out.print("취미 : ");
         for (String hobbys: hobby) {
-            System.out.println(hobbys + " ");
+            System.out.print(hobbys + " ");
         }
         System.out.println();
     }
