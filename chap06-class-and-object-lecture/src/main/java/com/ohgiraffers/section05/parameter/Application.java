@@ -1,4 +1,4 @@
-package main.java.com.ohgiraffers.section04.parameter;
+package main.java.com.ohgiraffers.section05.parameter;
 
 public class Application {
 
