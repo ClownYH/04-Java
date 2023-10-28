@@ -19,8 +19,7 @@ public class Application {
         * */
 
         Scanner scanner = new Scanner(System.in);
-        Player_data_frame data = new Player_data_frame();
-        Character characterCreating = new Character();
+        Character character = new Character();
 
         // 프로그램을 실행
         System.out.println("=========================");
@@ -32,22 +31,28 @@ public class Application {
         while(true) {
             // 메뉴창 제시
             System.out.println("원하시는 선택지를 골라주세요.");
-            System.out.println("1. 게임 시작");
+            System.out.println("1. 캐릭터 생성");
+            System.out.println("2. 게임 시작");
             System.out.println("9. 게임 종료");
+
             String menu = scanner.nextLine();
+
             switch (menu) {
                 case "1" : // 1을 입력할 경우
-                    System.out.println("캐릭터를 시작합니다.");
-                    Play_Start playStart = new Play_Start();
-                    playStart.Play_Start(); // 게임 시작으로 이동합니다.
+                    System.out.println("캐릭터를 선택합니다.");
+                    character.makeCharacter();
                     break;
+
+                case "2":
+                    System.out.println("게임을 시작합니다."); // 게임 시작으로 이동
+                    character.play();
 
                 case "9":
                     System.out.println("게임을 종료합니다.");
-                    return;
+                    return; // 게임을 종료
 
                 default:
-                    System.out.println("잘못 선택하셨습니다. 다시 선택해주세요."); break;
+                    System.out.println("잘못 선택하셨습니다. 다시 선택해주세요."); break; // 재선택 요구
             }
         }
 

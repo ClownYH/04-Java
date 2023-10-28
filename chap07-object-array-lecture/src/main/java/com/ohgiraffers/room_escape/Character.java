@@ -2,58 +2,24 @@ package main.java.com.ohgiraffers.room_escape;
 
 import java.util.Scanner;
 
-public class Character {
+public class Character { // 캐릭터를 생성
 
-    public static Player_data_frame[] characterCreating(){
+    public void makeCharacter() {
+        Sheet[] characters = new Sheet[3];
 
-        Scanner scanner = new Scanner(System.in);
-        Player_data_frame[] job = new Player_data_frame[3];
-        // 캐릭터 이름 설정
-        System.out.println("이름을 정해주세요.");
-        String name = scanner.next();
+        characters[0] = new Sheet("김철수", "학생", 2, 3, 4, 3);
+        characters[1] = new Sheet("박순희", "공무원", 3, 3, 2, 4);
+        characters[2] = new Sheet("오달구", "군인", 3, 4, 3, 2);
 
-        // 직업을 선택
-        boolean isTrue = true;
+        CharacterRegister characterRegister = new CharacterRegister();
+        characterRegister.regist(characters);
+    }
 
-        while(isTrue) {
-            System.out.println("직업을 선택해주세요.(1. 학생, 2. 군인, 3. 백수");
-            String num;
-            num = scanner.next();
+    public static void play() {
+        PlayingGame playingGame = new PlayingGame();
+        Sheet player = playingGame.showAllCharacters();
 
-            switch (num) {
-                case "1": // 학생을 선택
-                    job[0] = new Player_data_frame(name, "학생", 3, 2, 2, 3);
-                    System.out.println("-------------------------------");
-                    System.out.println();
-//                    System.out.println(job[0].getInfo());
-                    isTrue =false;
-                    break;
-
-                case "2": // 군인을 선택
-                    job[1] = new Player_data_frame(name, "군인", 3, 3, 2, 2);
-                    System.out.println("-------------------------------");
-                    System.out.println();
-//                    System.out.println(job[1].getInfo());
-                    isTrue =false;
-                    break;
-
-                case "3": // 백수를 선택
-                    job[2] = new Player_data_frame(name, "백수", 2, 2, 3, 3);
-                    System.out.println("-------------------------------");
-                    System.out.println();
-//                    System.out.println(job[2].getInfo());
-                    isTrue =false;
-                    break;
-
-                default: // 기타 선택지
-                    System.out.println("제대로 된 직업을 선택해 주세요.");
-                    break;
-            }
-
-
-        }
-
-
-    return job;
+        System.out.println("게임을 시작합니다.");
+        System.out.println(player.getName());
     }
 }

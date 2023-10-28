@@ -1,6 +1,6 @@
 package main.java.com.ohgiraffers.room_escape;
 
-public class Player_data_frame {
+public class Sheet {
 
     // 플레이어의 데이터 취급
     private String name;
@@ -8,17 +8,17 @@ public class Player_data_frame {
     private int hp;
     private int str;
     private int dex;
-    private int wis;
+    private int luk;
 
-    public Player_data_frame(){};
+    public Sheet(){};
 
-    Player_data_frame(String name, String job, int hp, int str, int dex, int wis){
+    Sheet(String name, String job, int hp, int str, int dex, int luk){
         this.name = name;
         this.job = job;
         this.hp = hp;
         this.str = str;
         this.dex = dex;
-        this.wis = wis;
+        this.luk = luk;
     }
 
     public String getName() {
@@ -55,20 +55,20 @@ public class Player_data_frame {
     public void setDex(int dex){
         this.dex = dex;
     }
-    public int getWis(){
-        return wis;
+    public int getluk(){
+        return luk;
     }
-    public void setWis(int wis){
-        this.wis = wis;
+    public void setluk(int luk){
+        this.luk = luk;
     }
 
 
-    public String getInfo() {
-        return "당신의 이름은 "+ name +
-                "이고 직업은 "+ job +"입니다. 당신의 체력은 " + hp +
-                "이고, 당신이 가진 힘은 " + str +
-                "이며, 민첩성은 " + dex +
-                ", 행운은 " + wis +
-                "입니다.";
+    public String getInfo(){
+
+        return "캐릭터명 : "+ name +
+                ", 직업 : "+ job +", 체력 : " + hp +
+                ", 힘 : " + str +
+                ", 민첩성 : " + dex +
+                ", 행운 : " + luk;
     }
 }
