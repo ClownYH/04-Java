@@ -15,11 +15,10 @@ public class Character { // 캐릭터를 생성
         characterRegister.regist(characters);
     }
 
-    public static void play() {
-        PlayingGame playingGame = new PlayingGame();
-        Sheet player = playingGame.showAllCharacters();
+    public void showCharacter(){
+        Play play = new Play();
+        play.play();
 
-        System.out.println("게임을 시작합니다.");
-        System.out.println(player.getName());
     }
+
 }

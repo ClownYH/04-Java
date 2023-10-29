@@ -45,7 +45,7 @@ public class Application {
 
                 case "2":
                     System.out.println("게임을 시작합니다."); // 게임 시작으로 이동
-                    character.play();
+                    character.showCharacter();
 
                 case "9":
                     System.out.println("게임을 종료합니다.");
