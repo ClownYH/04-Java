@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainGame {
     Scanner scanner = new Scanner(System.in);
-
+    // 여기서부터 확실한 답을 찾지 못함
     public void mainKim() {
         Sheet[] character = new Sheet[1];
         character[0] = new Sheet("김철수", "학생", 2, 3, 4, 3);
