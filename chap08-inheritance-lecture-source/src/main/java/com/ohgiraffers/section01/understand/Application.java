@@ -37,7 +37,7 @@ public class Application {
         seller.sale(cars);
         System.out.println(seller);
 
-        Car car = new Car("H", 1000);
+        Car car = new Car("H", 1000, "car");
         System.out.println("car와 oldCar가 같은지 비교 : " + (car instanceof OldCar)); // instanceOf 는 자료형비교(자료형, 주소값)
         System.out.println("car와 electricCar가 같은지 비교 : " + (car instanceof ElectricCar));
         System.out.println("형변환");

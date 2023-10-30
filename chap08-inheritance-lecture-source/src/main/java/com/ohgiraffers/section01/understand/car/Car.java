@@ -13,8 +13,10 @@ public class Car {
 
     private int price;
 
+    private String name;
 
-    public Car(String brand, int price){
+
+    public Car(String brand, int price, String name){
         this.brand = brand;
         this.price  = price;
     }
@@ -28,4 +30,7 @@ public class Car {
         return this.brand;
     }
 
+    public String getName() {
+        return name;
+    }
 }

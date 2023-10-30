@@ -27,7 +27,7 @@ public class Seller {
         for(Car car : cars){
             if(car instanceof ElectricCar){ // heap에 생성된 car의 자료형이 ElectricCar와 같은지 비교
                 ElectricCar electricCar = (ElectricCar) car; // 여기도
-                System.out.println(electricCar.getBrand() + "사의 " + electricCar.getCarName() + "를 판매하였습니다.");
+                System.out.println(electricCar.getBrand() + "사의 " + electricCar.getName() + "를 판매하였습니다.");
                 result += (int)electricCar.getPrice();
             }else{
                 OldCar oldCar = (OldCar) car;
@@ -54,7 +54,7 @@ public class Seller {
 
     public void electronicCarSale(ElectricCar[] car){
         for (ElectricCar electricCar : car) {
-            System.out.println(electricCar.getBrand() + " 사의 " + electricCar.getCarName() + "를 판매하였습니다.");
+            System.out.println(electricCar.getBrand() + " 사의 " + electricCar.getName() + "를 판매하였습니다.");
             result += electricCar.getPrice() * 0.1;
         }
     }
