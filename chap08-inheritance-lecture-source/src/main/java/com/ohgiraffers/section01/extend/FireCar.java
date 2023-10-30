@@ -24,6 +24,7 @@ public class FireCar extends Car { // Car에서 상속받은 FireCar라는 의�
 
     }
 
+
     public void spayWater(){
         System.out.println("불난 곳을 발견했습니다. 물을 뿌립니다.");
     }
