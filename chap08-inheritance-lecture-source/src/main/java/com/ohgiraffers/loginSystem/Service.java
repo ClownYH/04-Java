@@ -37,40 +37,41 @@ public class Service {
         User_Finder userFinder = new User_Finder();
         User_data[] users = userFinder.finder();
 
-        System.out.println("아이디를 입력해주세요.");
-        String insertId = scanner.next();
+
         for(int i = 0; i < users.length; i++){
-            if(!users[i].getId().equals(insertId) && insertId.equals(users[i].getId())){
+            i = 0;
+            System.out.println("아이디를 입력해주세요.");
+            String insertId = scanner.next();
+            if(!(users[i].getId().equals(insertId) && insertId.equals(users[i].getId()))){
                 System.out.println("잘못된 아이디입니다.");
+            }else{
+                System.out.println("비밀번호를 입력해주세요.");
+                String insertPwd = scanner.next();
+                for(i = 0; i < users.length;){
+                    if(!(users[i].getPwd().equals(insertPwd) && insertPwd.equals(users[i].getPwd()) && users[i].getId().equals(insertId) && insertId.equals(users[i].getId()))){
+                        System.out.println("잘못된 비밀번호입니다.");
+                        break;
+                    }else{
+                        while(true){
+                            System.out.println("무엇을 하시겠습니까?");
+                            System.out.println("1. 가챠 | 2. 로그아웃");
+                            String num = scanner.next();
+                            switch (num){
+                                case "1" :
+                                    Game game = new Game();
+                                    game.game();
+                                    break;
+                                case "2" :
+                                    System.out.println("로그아웃하셨습니다.");
+                                    return;
+                            }
+                        }
+
+                    }
+                }
+
             }
-            break;
         }
-
-        System.out.println("비밀번호를 입력해주세요.");
-        String insertPwd = scanner.next();
-        for(int i = 0; i < users.length; i++){
-            if(!users[i].getPwd().equals(insertPwd) && insertPwd.equals(users[i].getPwd())){
-                System.out.println("잘못된 비밀번호입니다.");
-            }
-            break;
-        }
-
-        System.out.println("무엇을 하시겠습니까?");
-
-        while(true){
-            System.out.println("1. 가챠 | 2. 로그아웃");
-            String num = scanner.next();
-            switch (num){
-                case "1" :
-                    Game game = new Game();
-                    game.game();
-                    break;
-                case "2" :
-                    System.out.println("로그아웃하셨습니다.");
-                    return;
-            }
-        }
-
 
     }
 }
