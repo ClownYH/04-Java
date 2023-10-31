@@ -3,6 +3,7 @@ package main.java.com.ohgiraffers.loginSystem;
 public class Register {
     public void regist(User_data[] users){
         User_Information user_information = new User_Information();
+
         System.out.println("회원이 등록되었습니다.");
 
         for(User_data user : users){
