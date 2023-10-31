@@ -70,5 +70,19 @@ public class Application01 {
         System.out.println("animal1이 Tiger와 같은지 확인 : " + (animal1 instanceof Tiger));
         System.out.println("animal1이 Rabbit과 같은지 확인 : " + (animal1 instanceof Rabbit));
         System.out.println("animal1이 Animal과 같은지 확인 : " + (animal1 instanceof Animal));
+        System.out.println("animal 이 Rabbit과 같은가 " + (animal instanceof  Rabbit));
+        System.out.println("animal 이 Rabbit과 같은가 " + (animal instanceof  Tiger)); // 자료형의 크기가 다르다.
+
+        /*
+        * 클래스 형변환은 up-casting과 down-casting으로 구분할 수 있다.
+        * up-casting : 상위 타입으로 형 변환
+        * down-casting : 하위 타입으로 형 변환
+        * 또한 작성 여부에 따라 명시적과 묵시적 두 가지로 구분된다.
+        * */
+
+        Animal animal3 = (Animal) new Rabbit(); // up-casting 명시적 형변환
+        Animal animal4 = new Rabbit(); // 묵시적 형변환
+        Rabbit rabbit1 = (Rabbit) new Animal(); // down-casting 명시적 형변환
+//        Rabbit rabbit2 = new Animal(); // 묵시적 형변환이나 에러
     }
 }
