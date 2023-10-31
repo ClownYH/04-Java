@@ -7,3 +7,4 @@ public interface SnsAuth {
     boolean login(MemberDTO memberDTO);
 
 }
+

@@ -17,7 +17,10 @@ public class Character { // 캐릭터를 생성
 
     public void showCharacter(){ // Play 객체 생성 후 play 메소드 호출
         Play play = new Play();
-        play.play();
+        play.play
+
+
+                ();
 
     }
 

@@ -11,14 +11,16 @@ import java.util.Scanner;
 public class MemberService {
 
     private SnsAuth snsAuth;
+    Scanner scanner = new Scanner(System.in);
 
     public void signUpMember() {
 
-        Scanner scanner = new Scanner(System.in);
         MemberReposity memberReposity = new MemberReposity();
+
         System.out.println("가입하고자 하는 계정을 선택해주세요.");
         System.out.println("1. google | 2. kakao | 3. naver");
         int authType0 = scanner.nextInt();
+
         switch (authType0) {
             case 1:
                 String auth1 = "google";
@@ -28,7 +30,8 @@ public class MemberService {
                 System.out.println("비밀번호를 입력하세요.");
                 String pwd1 = scanner.next();
                 MemberDTO google = new MemberDTO(auth1, id1, pwd1);
-                memberReposity.store(google)
+                memberReposity.store(google);
+
                 break;
 
             case 2:
@@ -39,7 +42,8 @@ public class MemberService {
                 System.out.println("비밀번호를 입력하세요.");
                 String pwd2 = scanner.next();
                 MemberDTO kakao = new MemberDTO(auth2, id2, pwd2);
-                return kakao;
+                memberReposity.store(kakao);
+
                 break;
 
             case 3:
@@ -50,7 +54,8 @@ public class MemberService {
                 System.out.println("비밀번호를 입력하세요.");
                 String pwd3 = scanner.next();
                 MemberDTO naver = new MemberDTO(auth3, id3, pwd3);
-                return naver;
+                memberReposity.store(naver);
+
                 break;
         }
     }
@@ -58,18 +63,69 @@ public class MemberService {
 
         // 인증 방식 대조
         switch (authType){
+
             case "google" :
-                GoogleAuth googleAuth = new GoogleAuth();
-                snsAuth = googleAuth; break;
+
+                System.out.println("아이디를 입력하세요.");
+                String id1 = scanner.next();
+                if(id1.equals(MemberReposity.member.getId()) && MemberReposity.member.getId().equals(id1)) {
+                    System.out.println("비밀번호를 입력하세요.");
+                    String pwd1 = scanner.next();
+                    if (pwd1.equals(MemberReposity.member.getPwd()) && (MemberReposity.member.getPwd().equals(pwd1))) {
+                        GoogleAuth googleAuth = new GoogleAuth();
+                        snsAuth = googleAuth;
+                        break;
+                    } else {
+                        System.out.println("잘못된 비밀번호입니다.");
+
+                    }
+                }else{
+                        System.out.println("잘못된 아이디입니다.");
+                }
+                break;
+
             case "naver" :
-                NaverAuth naverAuth = new NaverAuth();
-                snsAuth = naverAuth; break;
+
+                System.out.println("아이디를 입력하세요.");
+                String id2 = scanner.next();
+                if(id2.equals(MemberReposity.member.getId()) && MemberReposity.member.getId().equals(id2)){
+                    System.out.println("비밀번호를 입력하세요.");
+                    String pwd2 = scanner.next();
+                    if(pwd2.equals(MemberReposity.member.getPwd()) && (MemberReposity.member.getPwd().equals(pwd2))){
+                        NaverAuth naverAuth = new NaverAuth();
+                        snsAuth = naverAuth; break;
+                    } else {
+                        System.out.println("잘못된 비밀번호입니다.");
+
+                    }
+                }else{
+                    System.out.println("잘못된 아이디입니다.");
+                }
+
             case "kakao" :
-                KakaoAuth kakaoAuth = new KakaoAuth();
-                snsAuth = kakaoAuth; break;
+
+                System.out.println("아이디를 입력하세요.");
+                String id3 = scanner.next();
+                if(id3.equals(MemberReposity.member.getId()) && MemberReposity.member.getId().equals(id3)){
+                    System.out.println("비밀번호를 입력하세요.");
+                    String pwd3 = scanner.next();
+                    if(pwd3.equals(MemberReposity.member.getPwd()) && (MemberReposity.member.getPwd().equals(pwd3))){
+                        KakaoAuth kakaoAuth = new KakaoAuth();
+                        snsAuth = kakaoAuth; break;
+                    }else{
+                        System.out.println("잘못된 비밀번호입니다.");
+                    }
+
+                }else {
+                    System.out.println("잘못된 아이디입니다.");
+                }
+
+
+
             default:
                 System.out.println("존재하지 않는 인증 유형입니다."); return false;
         }
+
         boolean result = snsAuth.login(memberDTO);
         return result;
     }
