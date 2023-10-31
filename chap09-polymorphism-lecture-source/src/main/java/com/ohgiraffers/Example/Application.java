@@ -18,26 +18,26 @@ public class Application {
         MemberService memberService= new MemberService();
 
 
-        // 인증방식 선택
 
-        while (true) {
+
+        while (true) {// 메뉴 선택
             System.out.println("===========================================");
             System.out.println("메뉴를 골라주세요.");
             System.out.println("1. 계정 등록  | 2. 로그인  | 9. 프로그램 종료");
             int num = scanner.nextInt();
             switch (num) {
-                case 1:
+                case 1: // 계정 등록
                     System.out.println("계정 등록을 실행합니다.");
-                    memberService.signUpMember();
+                    memberService.signUpMember(); // 회원가입 메소드 실행
                     break;
 
-                case 2:
+                case 2: // 로그인
                     System.out.println("로그인을 진행합니다.");
                     System.out.println("인증할 방식을 입력해주세요.");
                     System.out.println("google | kakao | naver");
-                    String author = scanner.next();
+                    String author = scanner.next(); // 인증하고자 하는 사이트 선택
 
-                    if(memberService.findMember(author, MemberReposity.member)){
+                    if(memberService.findMember(author, MemberReposity.member)){ // 인증 대조 메소드 실행
                         System.out.println((MemberReposity.member.getSnsAuth() + "에 인증된 " + MemberReposity.member.getId()+ " 님 환영합니다."));
                     }else{
                         System.out.println(MemberReposity.member.getSnsAuth() + "인증된 회원이 없습니다.");
