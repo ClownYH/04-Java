@@ -26,13 +26,11 @@ public class Application {
             int choice = scanner.nextInt();
 
             scanner.nextLine();
-
             System.out.print("아이디를 입력해주세요 : ");
             memberDTO.setId(scanner.nextLine());
             System.out.print("비밀번호를 입력해주세요 : ");
             memberDTO.setPass(scanner.nextLine());
             boolean result;
-
             switch (choice){
                 case 1 : memberService = new MemberService(new GoogleAuth());
                     result = memberService.findMember(memberDTO);
