@@ -1,4 +1,4 @@
-package main.java.com.ohgiraffers.Example.dto;
+package main.java.com.ohgiraffers.example.dto;
 
 public class MemberDTO {
 

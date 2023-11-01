@@ -1,10 +1,10 @@
-package main.java.com.ohgiraffers.Example.service;
+package main.java.com.ohgiraffers.example.service;
 
-import main.java.com.ohgiraffers.Example.auth.GoogleAuth;
-import main.java.com.ohgiraffers.Example.auth.KakaoAuth;
-import main.java.com.ohgiraffers.Example.auth.NaverAuth;
-import main.java.com.ohgiraffers.Example.auth.SnsAuth;
-import main.java.com.ohgiraffers.Example.dto.MemberDTO;
+import main.java.com.ohgiraffers.example.auth.GoogleAuth;
+import main.java.com.ohgiraffers.example.auth.KakaoAuth;
+import main.java.com.ohgiraffers.example.auth.NaverAuth;
+import main.java.com.ohgiraffers.example.auth.SnsAuth;
+import main.java.com.ohgiraffers.example.dto.MemberDTO;
 
 import java.util.Scanner;
 

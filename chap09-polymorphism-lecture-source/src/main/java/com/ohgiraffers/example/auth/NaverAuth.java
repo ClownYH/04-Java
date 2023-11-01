@@ -1,6 +1,6 @@
-package main.java.com.ohgiraffers.Example.auth;
+package main.java.com.ohgiraffers.example.auth;
 
-import main.java.com.ohgiraffers.Example.dto.MemberDTO;
+import main.java.com.ohgiraffers.example.dto.MemberDTO;
 
 public class NaverAuth implements SnsAuth {
     @Override

@@ -1,6 +1,6 @@
-package main.java.com.ohgiraffers.Example.service;
+package main.java.com.ohgiraffers.example.service;
 
-import main.java.com.ohgiraffers.Example.dto.MemberDTO;
+import main.java.com.ohgiraffers.example.dto.MemberDTO;
 
 public class MemberReposity {
 

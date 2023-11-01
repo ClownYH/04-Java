@@ -1,8 +1,7 @@
-package main.java.com.ohgiraffers.Example;
+package main.java.com.ohgiraffers.example;
 
-import main.java.com.ohgiraffers.Example.dto.MemberDTO;
-import main.java.com.ohgiraffers.Example.service.MemberReposity;
-import main.java.com.ohgiraffers.Example.service.MemberService;
+import main.java.com.ohgiraffers.example.service.MemberReposity;
+import main.java.com.ohgiraffers.example.service.MemberService;
 
 import java.util.Scanner;
 
