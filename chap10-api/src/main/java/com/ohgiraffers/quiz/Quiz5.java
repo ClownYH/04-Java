@@ -34,7 +34,7 @@ public class Quiz5 {
             for(int k = 0; k < 2 * i + 1; k++){
                 System.out.print("*");
             }
-            System.out.println();
+            System.out.println(); // 한줄 내림, 1바퀴에 한줄을 작성
         }
 
         for(int i = 0; i < num - 1; i++){
