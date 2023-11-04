@@ -19,10 +19,12 @@ public class Kiyu {
     }
 
     public void setHp(int damage) {
-        this.hp += hp;
-        if(this.hp > 100){
+        this.hp += damage;
+
+        if(this.getHp() > 100){
             this.hp = 100;
-        } else if (this.hp < 0) {
+        } else if (this.getHp() <= 0) {
+            this.hp = 0;
             System.out.println("기유 트레이너가 쓰러졌습니다. 119를 불러주세요.");
         }
     }

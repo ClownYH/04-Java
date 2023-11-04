@@ -48,13 +48,25 @@ public class Application {
         // member 10명만큼 일 시키기
         for(int i =0; i < members.size(); i++){
 
+            System.out.println(i + 1 + "번째 회원님의 운동 상태 : " + members.get(i).gethType());
             kiyu.setMoney(members.get(i).gethType().getCash());
             kiyu.setHp(members.get(i).gethType().getDamage());
+
+            if(kiyu.getHp() <= 0){
+                // 체력이 먼저 떨어졌을 때의 결과
+                System.out.println("기유의 체력 : ");
+                System.out.println(kiyu.getHp());
+                System.out.println("기유의 수입 : ");
+                System.out.println(kiyu.getMoney());
+                return;
+            }
 
         }
 
         // 결과
+        System.out.println("기유의 체력 : ");
         System.out.println(kiyu.getHp());
+        System.out.println("기유의 수입 : ");
         System.out.println(kiyu.getMoney());
 
 
