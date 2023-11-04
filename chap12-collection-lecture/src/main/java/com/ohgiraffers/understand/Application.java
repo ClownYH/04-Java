@@ -14,7 +14,7 @@ public class Application {
         // 오름차순으로 당첨 번호 만들기
         TreeSet lotto = new TreeSet();
 
-        for(int i = 0; i < 6; i++){
+        while(!(lotto.toArray().length == 6)){
             int lottoNum = ((int)(Math.random() * 45) + 1);
             if (!lotto.contains(lottoNum)) {
                 lotto.add(lottoNum);
@@ -29,14 +29,16 @@ public class Application {
         // 오름차순으로 고객이 뽑은 번호
         TreeSet number = new TreeSet();
 
-        for(int i = 0; i < 6; i++){
-            int lottoNum2 = ((int)(Math.random() * 45) + 1);
-            if (!number.contains(lottoNum2)) {
-                number.add(lottoNum2);
+            while(!(number.toArray().length == 6)) {
+                int lottoNum2 = ((int) (Math.random() * 45) + 1);
+                if (!number.contains(lottoNum2)) {
+                    number.add(lottoNum2);
+
+                }
             }
-        }
 
         // 배열화
+        System.out.println(number);
         Object[] obj2 = number.toArray();
 
 
@@ -62,9 +64,15 @@ public class Application {
                 } else {
 
                     number.clear();
-                    for (int j = 0; j < 6; j++) {
-                        number.add((int) (Math.random() * 45) + 1);
+
+                    while(!(number.toArray().length == 6)) {
+                        int lottoNum2 = ((int) (Math.random() * 45) + 1);
+                        if (!number.contains(lottoNum2)) {
+                            number.add(lottoNum2);
+
+                        }
                     }
+                    System.out.println(number);
                     obj2 = number.toArray();
                 }
 
