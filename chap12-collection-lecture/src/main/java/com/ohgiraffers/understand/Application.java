@@ -38,7 +38,6 @@ public class Application {
             }
 
         // 배열화
-        System.out.println(number);
         Object[] obj2 = number.toArray();
 
 
@@ -59,7 +58,7 @@ public class Application {
                     for (int p = 0; p < obj2.length; p++) {
                         System.out.print("[" + obj2[p] + "]");
                     }
-                    System.out.println("당첨");
+                    System.out.println("당첨!!!!!!!!!!!");
                     return;
                 } else {
 
